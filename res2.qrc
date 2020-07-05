@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/qt.png</file>
+        <file>img/exit.png</file>
+    </qresource>
+    <qresource prefix="/styles">
+        <file>style.txt</file>
+    </qresource>
+</RCC>

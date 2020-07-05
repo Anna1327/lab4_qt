@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>641</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/styles/style.txt);</string>
+    </property>
+    <property name="title">
+     <string>GroupBox</string>
+    </property>
+    <widget class="QDial" name="dial">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>50</y>
+       <width>191</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>24</number>
+     </property>
+    </widget>
+    <widget class="QSlider" name="verticalSlider">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>20</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>50</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>50</y>
+       <width>151</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>50</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_New_File"/>
+    <addaction name="action_New_Window"/>
+    <addaction name="separator"/>
+    <addaction name="action_Open_File_2"/>
+    <addaction name="action_Open_Folder_2"/>
+    <addaction name="action_Open_Workspace_2"/>
+    <addaction name="action_Open_Recent_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_Add_Folder_to_Workspace"/>
+    <addaction name="action_Save_Workspace_As"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save"/>
+    <addaction name="action_Save_As"/>
+    <addaction name="action_Save_All"/>
+    <addaction name="separator"/>
+    <addaction name="action_Auto_Save"/>
+    <addaction name="action_Preferences"/>
+    <addaction name="separator"/>
+    <addaction name="actionRevert_File"/>
+    <addaction name="action_Close_Editor"/>
+    <addaction name="action_Close_Workspace"/>
+    <addaction name="action_Close_Window"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_Undo"/>
+    <addaction name="action_Redo"/>
+    <addaction name="separator"/>
+    <addaction name="action_Cut"/>
+    <addaction name="action_Copy"/>
+    <addaction name="action_Paste"/>
+    <addaction name="separator"/>
+    <addaction name="action_Find"/>
+    <addaction name="action_Replace"/>
+    <addaction name="separator"/>
+    <addaction name="action_Find_in_Files"/>
+    <addaction name="action_Replace_in_Files"/>
+    <addaction name="separator"/>
+    <addaction name="action_Toggle_line_Comment"/>
+    <addaction name="action_Toggle_Block_Comment"/>
+    <addaction name="action_Emmet_Expand_Abbreviation"/>
+    <addaction name="action_Emmet"/>
+   </widget>
+   <widget class="QMenu" name="menu_Selection">
+    <property name="title">
+     <string>&amp;Selection</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Go">
+    <property name="title">
+     <string>&amp;Go</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Debug">
+    <property name="title">
+     <string>&amp;Debug</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Terminal">
+    <property name="title">
+     <string>&amp;Terminal</string>
+    </property>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_Selection"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Go"/>
+   <addaction name="menu_Debug"/>
+   <addaction name="menu_Terminal"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_New_File">
+   <property name="text">
+    <string>&amp;New File</string>
+   </property>
+  </action>
+  <action name="action_New_Window">
+   <property name="text">
+    <string>&amp;New Window</string>
+   </property>
+  </action>
+  <action name="action_Open_File">
+   <property name="text">
+    <string>&amp;Open File...</string>
+   </property>
+  </action>
+  <action name="action_Open_Folder">
+   <property name="text">
+    <string>&amp;Open Folder...</string>
+   </property>
+  </action>
+  <action name="action_Open_Workspace">
+   <property name="text">
+    <string>&amp;Open Workspace...</string>
+   </property>
+  </action>
+  <action name="action_Open_Recent">
+   <property name="text">
+    <string>&amp;Open Recent</string>
+   </property>
+  </action>
+  <action name="action_Open_File_2">
+   <property name="text">
+    <string>&amp;Open File...</string>
+   </property>
+  </action>
+  <action name="action_Open_Folder_2">
+   <property name="text">
+    <string>&amp;Open Folder...</string>
+   </property>
+  </action>
+  <action name="action_Open_Workspace_2">
+   <property name="text">
+    <string>&amp;Open Workspace...</string>
+   </property>
+  </action>
+  <action name="action_Open_Recent_2">
+   <property name="text">
+    <string>&amp;Open Recent</string>
+   </property>
+  </action>
+  <action name="action_Add_Folder_to_Workspace">
+   <property name="text">
+    <string>&amp;Add Folder to Workspace...</string>
+   </property>
+  </action>
+  <action name="action_Save_Workspace_As">
+   <property name="text">
+    <string>&amp;Save Workspace As...</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="action_Save_As">
+   <property name="text">
+    <string>&amp;Save As...</string>
+   </property>
+  </action>
+  <action name="action_Save_All">
+   <property name="text">
+    <string>&amp;Save All</string>
+   </property>
+  </action>
+  <action name="action_Auto_Save">
+   <property name="text">
+    <string>&amp;Auto Save</string>
+   </property>
+  </action>
+  <action name="action_Preferences">
+   <property name="text">
+    <string>&amp;Preferences</string>
+   </property>
+  </action>
+  <action name="actionRevert_File">
+   <property name="text">
+    <string>Revert File</string>
+   </property>
+  </action>
+  <action name="action_Close_Editor">
+   <property name="text">
+    <string>&amp;Close Editor</string>
+   </property>
+  </action>
+  <action name="action_Close_Workspace">
+   <property name="text">
+    <string>&amp;Close Workspace</string>
+   </property>
+  </action>
+  <action name="action_Close_Window">
+   <property name="text">
+    <string>&amp;Close Window</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="res2.qrc">
+     <normaloff>:/img/img/exit.png</normaloff>:/img/img/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="action_Undo">
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+  </action>
+  <action name="action_Redo">
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+  </action>
+  <action name="action_Cut">
+   <property name="text">
+    <string>&amp;Cut</string>
+   </property>
+  </action>
+  <action name="action_Copy">
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+  </action>
+  <action name="action_Paste">
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+  </action>
+  <action name="action_Find">
+   <property name="text">
+    <string>&amp;Find</string>
+   </property>
+  </action>
+  <action name="action_Replace">
+   <property name="text">
+    <string>&amp;Replace</string>
+   </property>
+  </action>
+  <action name="action_Find_in_Files">
+   <property name="text">
+    <string>&amp;Find in Files</string>
+   </property>
+  </action>
+  <action name="action_Replace_in_Files">
+   <property name="text">
+    <string>&amp;Replace in Files</string>
+   </property>
+  </action>
+  <action name="action_Toggle_line_Comment">
+   <property name="text">
+    <string>&amp;Toggle line Comment</string>
+   </property>
+  </action>
+  <action name="action_Toggle_Block_Comment">
+   <property name="text">
+    <string>&amp;Toggle Block Comment</string>
+   </property>
+  </action>
+  <action name="action_Emmet_Expand_Abbreviation">
+   <property name="text">
+    <string>&amp;Emmet: Expand Abbreviation</string>
+   </property>
+  </action>
+  <action name="action_Emmet">
+   <property name="text">
+    <string>&amp;Emmet...</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>dial</tabstop>
+  <tabstop>verticalSlider</tabstop>
+  <tabstop>spinBox</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>horizontalSlider</tabstop>
+ </tabstops>
+ <resources>
+  <include location="res2.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>verticalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>progressBar</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>dial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>82</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verticalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>dial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>131</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>595</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>dial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>130</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>397</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>valueChanged(int)</signal>
+  <slot>setValue(double)</slot>
+  <slot>setValue(float)</slot>
+ </slots>
+</ui>

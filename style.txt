@@ -1,0 +1,4 @@
+QGroupBox > QPushButton {
+	background-color: red;
+	
+}
